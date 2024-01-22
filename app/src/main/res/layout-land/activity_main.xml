@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GRE Timer"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
+
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="200dp"
+        android:layout_height="320dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="106dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="600dp"
+        android:layout_marginBottom="46dp">
+
+
+        <!--progress bar implementation-->
+
+        <!--Text implementation in center of the progress bar-->
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:background="@drawable/circular_shape"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="---"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+<!--<TextView-->
+<!--    android:id="@+id/text_view_countdown"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_centerHorizontal="true"-->
+<!--    android:layout_centerVertical="true"-->
+<!--    android:text="00:00"-->
+<!--    android:textColor="@android:color/black"-->
+<!--    android:textSize="60sp" />-->
+
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="330dp"
+        android:layout_marginBottom="146dp"
+        android:text="start"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="127dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="330dp"
+        android:layout_marginBottom="30dp"
+        android:text="reset"
+        android:textSize="22dp"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <!--Enter Time-->
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="550dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="NumberPicker Tutorial"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20dp"/>
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </RelativeLayout>
+
+        <Button
+            android:id="@+id/tickbutton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="750dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_bg_round"
+            android:padding="15dp"
+            android:text="OK"
+            android:textSize="20dp"/>
+
+</RelativeLayout>
